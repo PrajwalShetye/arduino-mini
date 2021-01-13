@@ -35,6 +35,6 @@
 *.app
 
 # Directories
-*/dist/*
-*/install/*
-*/build/*
+./*/dist/*
+install/*
+./*/build/*
