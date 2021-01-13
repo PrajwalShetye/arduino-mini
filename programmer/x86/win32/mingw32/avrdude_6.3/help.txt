@@ -1,0 +1,56 @@
+# avrdude -p 2313 -e -m flash -i main.hex
+
+avrdude: AVR device initialized and ready to accept instructions
+
+avrdude: Device signature = 0x1e9101
+
+avrdude: erasing chip
+avrdude: done.
+avrdude: reading input file "main.hex"
+avrdude: input file main.hex auto detected as Intel Hex
+
+avrdude: writing flash:
+1749 0x00
+avrdude: 1750 bytes of flash written
+avrdude: verifying flash memory against main.hex:
+avrdude: reading on-chip flash data:
+1749  0x00
+avrdude: verifying ...
+avrdude: 1750 bytes of flash verified
+
+avrdude done.  Thank you.
+
+The -p 2313 option lets avrdude know that we are operating on an AT90S2313 chip. This option specifies the device id and is matched up with the device of the same id in avrdude's configuration file ( /usr/local/etc/avrdude.conf ). To list valid parts, specify the -v option. The -e option instructs avrdude to perform a chip-erase before programming; this is almost always necessary before programming the flash. The -m flash option indicates that we want to upload data into the flash memory, while -i main.hex specifies the name of the input file.
+
+The EEPROM is uploaded in the same way, the only difference is that you would use -m eeprom instead of -m flash.
+
+To use interactive mode, use the -t option:
+
+# avrdude -p 2313 -t
+avrdude: AVR device initialized and ready to accept instructions
+avrdude: Device signature = 0x1e9101
+avrdude>
+
+The '?' command displays a list of valid
+commands:
+
+avrdude> ?
+>>> ?
+Valid commands:
+
+  dump   : dump memory  : dump <memtype> <addr> <N-Bytes>
+  read   : alias for dump
+  write  : write memory : write <memtype> <addr> <b1> <b2> ... <bN>
+  erase  : perform a chip erase
+  sig    : display device signature bytes
+  part   : display the current part information
+  send   : send a raw command : send <b1> <b2> <b3> <b4>
+  help   : help
+  ?      : help
+  quit   : quit
+
+Use the 'part' command to display valid memory types for use with the
+'dump' and 'write' commands.
+
+avrdude>
+
