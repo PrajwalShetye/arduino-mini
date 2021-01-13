@@ -6,9 +6,6 @@
 *.lo
 *.o
 *.obj
-*.elf
-*.hex
-*.epp
 
 # Precompiled Headers
 *.gch
@@ -33,8 +30,12 @@
 *.exe
 *.out
 *.app
+*.elf
+*.hex
+*.epp
 
-# Directories
+# Directories & workspaces
 ./*/dist/*
 install/*
 ./*/build/*
+./*.code-workspace
