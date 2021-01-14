@@ -39,7 +39,7 @@
 install/*
 ./*/build/*
 ./*.code-workspace
-./.vscode/*
-./package/pcf/*
-./sketch/PCFExamples/*
+.vscode/*
+package/pcf/*
+sketch/PCFExamples/*
 
