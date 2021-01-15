@@ -1,0 +1,9 @@
+DebugWire Debugger - The goal of this project is to create an Open-Source-Debugger for AVRs via Debug Wire.
+https://hackaday.io/project/20629-debugwire-debugger
+
+The debugWire protocol (if the link doesn't work we have the PDF of website)
+http://www.ruemohr.org/docs/debugwire.html
+
+Also refer ATmega328P datasheet - Chapter 24. debugWIRE On-chip Debug System
+https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+
